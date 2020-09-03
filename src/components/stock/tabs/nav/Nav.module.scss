@@ -1,0 +1,59 @@
+@import "../../../../styles/utils.scss";
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/breakpoints.scss";
+
+.tabsNav {
+  box-shadow: 20px 0 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  font-family: $font-family-base;
+  border: none;
+  background-color: transparent;
+  padding: pixelToRem(36) pixelToRem(15);
+  text-align: center;
+  min-width: pixelToRem(192);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out 0s;
+
+  &:focus {
+    outline: none;
+  }
+
+  > span {
+    display: block;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: rgba(241, 241, 241, 0.3);
+  }
+
+  &.active {
+    background-color: $light-grey;
+    cursor: default;
+  }
+}
+
+.name {
+  font-size: pixelToRem(20);
+  text-transform: uppercase;
+  margin-bottom: pixelToRem(10);
+}
+
+.value {
+  font-size: pixelToRem(16);
+  margin-bottom: pixelToRem(10);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.dueValue {
+  font-size: pixelToRem(30);
+}
+
+@include desktopUp {
+  .tabsNav {
+    display: flex;
+    flex-direction: column;
+  }
+}

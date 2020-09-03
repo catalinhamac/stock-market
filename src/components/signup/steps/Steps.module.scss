@@ -1,0 +1,55 @@
+@import "../../../styles/utils.scss";
+
+.steps {
+  list-style-type: none;
+  padding: pixelToRem(50) 0 pixelToRem(86);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: pixelToRem(250);
+
+  li {
+    display: block;
+    width: pixelToRem(20);
+    height: pixelToRem(20);
+    border: 1px solid transparent;
+    position: relative;
+    border-radius: 50%;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+
+    &:before {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: pixelToRem(5);
+      height: pixelToRem(5);
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    &:after {
+      top: 50%;
+      left: calc(100% + 12px);
+      transform: translate(0, -50%);
+      width: calc(100% + 50px);
+      height: pixelToRem(1);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    &.active {
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

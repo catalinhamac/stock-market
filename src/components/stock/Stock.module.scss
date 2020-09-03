@@ -1,0 +1,12 @@
+@import "../../styles/utils.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: pixelToRem(30);
+
+  > div {
+    flex: 1;
+  }
+}

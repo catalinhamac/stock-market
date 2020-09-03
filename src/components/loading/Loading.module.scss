@@ -1,0 +1,9 @@
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: pixelToRem(15);
+}

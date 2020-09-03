@@ -1,0 +1,81 @@
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/breakpoints.scss";
+
+.mainNav {
+  background-color: $orange;
+  padding-top: pixelToRem(22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  position: relative;
+  z-index: 9999;
+}
+
+.btnLink {
+  border: none;
+  background-color: transparent;
+  padding: pixelToRem(7) pixelToRem(15);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ml0 {
+  margin-left: 0 !important;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.btnAdd {
+  cursor: pointer;
+}
+
+@include mobileUp {
+  .mainNav {
+    padding: pixelToRem(12) 0;
+    border-bottom: none;
+  }
+
+  .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar {
+    display: inline-block;
+    width: pixelToRem(25);
+    height: pixelToRem(25);
+    background-color: white;
+    border-radius: 50%;
+    margin-right: pixelToRem(15);
+  }
+
+  .search {
+    margin-right: pixelToRem(30);
+  }
+
+  .btnLink {
+    margin-right: pixelToRem(20);
+  }
+
+  .logo {
+    margin-left: pixelToRem(95);
+  }
+}
+
+.btnClose {
+  height: pixelToRem(39);
+}
+
+@include desktopUp {
+  .btnMenu {
+    cursor: pointer;
+  }
+}

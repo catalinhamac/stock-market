@@ -1,0 +1,13 @@
+@import "../../styles/utils.scss";
+@import "../../styles/variables.scss";
+
+.title {
+  margin: 0;
+  padding: pixelToRem(34) pixelToRem(15);
+  font-size: pixelToRem(19);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  background-color: $orange;
+}
