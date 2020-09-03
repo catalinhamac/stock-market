@@ -1,0 +1,171 @@
+@import "../../../../styles/utils.scss";
+@import "../../../../styles/breakpoints.scss";
+@import "../../../../styles/variables.scss";
+
+.box {
+  background-color: $yellow;
+  background-image: url("../../../../assets/img/WeatherBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: pixelToRem(25) pixelToRem(25) pixelToRem(16);
+  color: white;
+
+  p {
+    margin: 0;
+  }
+}
+
+.desc,
+.location {
+  font-size: pixelToRem(12);
+}
+
+.desc {
+  text-transform: capitalize;
+}
+
+.location {
+  opacity: 0.5;
+  font-size: pixelToRem(12);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: pixelToRem(88);
+
+  .img {
+    height: pixelToRem(38);
+    margin-bottom: pixelToRem(5);
+  }
+}
+
+.temp {
+  display: block;
+  font-size: pixelToRem(106);
+  line-height: pixelToRem(78);
+  position: relative;
+  padding-right: pixelToRem(7);
+
+  .degr {
+    position: absolute;
+    top: pixelToRem(3);
+    right: pixelToRem(-10);
+    font-size: pixelToRem(40);
+    line-height: pixelToRem(24);
+  }
+}
+
+.bottom {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      display: block;
+
+      &:first-child {
+        font-size: pixelToRem(19);
+      }
+      &:last-child {
+        font-size: pixelToRem(9);
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@include mobileUp {
+  .top {
+    padding-top: pixelToRem(10);
+    margin-bottom: pixelToRem(202);
+
+    .img {
+      height: pixelToRem(98);
+      margin-bottom: pixelToRem(26);
+    }
+  }
+
+  .tempNav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 pixelToRem(60);
+
+    li {
+      display: inline-block;
+      margin: 0 pixelToRem(15);
+      a {
+        display: block;
+        text-decoration: none;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: pixelToRem(11);
+        text-transform: uppercase;
+        padding-bottom: pixelToRem(7);
+      }
+
+      &.active {
+        a {
+          color: rgba(255, 255, 255, 1);
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+
+  .desc {
+    font-size: pixelToRem(26);
+    margin-bottom: pixelToRem(6);
+  }
+
+  .location {
+    font-size: pixelToRem(20);
+  }
+  .temp {
+    font-size: pixelToRem(170);
+
+    .degr {
+      font-size: pixelToRem(46);
+      top: pixelToRem(-13);
+      right: pixelToRem(9);
+    }
+  }
+
+  .bottom {
+    li {
+      span {
+        &:first-child {
+          font-size: pixelToRem(26);
+          margin-bottom: pixelToRem(5);
+        }
+
+        &:last-child {
+          font-size: pixelToRem(11);
+        }
+      }
+    }
+  }
+
+  .box {
+    padding-bottom: pixelToRem(30);
+    padding: pixelToRem(25) pixelToRem(40) pixelToRem(30);
+    background-image: none;
+  }
+}
+
+@include desktopUp {
+  .top {
+    .img {
+      margin-bottom: pixelToRem(30);
+    }
+  }
+}

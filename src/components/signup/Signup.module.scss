@@ -1,0 +1,25 @@
+@import "../../styles/utils.scss";
+@import "../../styles/breakpoints.scss";
+
+.wrapper {
+  background-image: linear-gradient(rgba(245, 145, 117, 1), rgba(28, 25, 8, 1));
+  padding-top: pixelToRem(63);
+  height: calc(100vh - 63px);
+}
+
+.title {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: pixelToRem(19);
+  margin: 0 0 pixelToRem(20);
+  margin-bottom: pixelToRem(108);
+}
+
+@include mobileUp {
+  .wrapper {
+    padding-top: pixelToRem(64);
+    height: calc(100vh - 64px);
+  }
+}

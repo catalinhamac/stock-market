@@ -1,0 +1,15 @@
+@import "../../styles/utils.scss";
+@import "../../styles/breakpoints.scss";
+
+.wrapper {
+  background-image: linear-gradient(rgba(245, 145, 117, 1), rgba(28, 25, 8, 1));
+  padding: pixelToRem(63) pixelToRem(20);
+  height: calc(100vh - 63px);
+}
+
+@include mobileUp {
+  .wrapper {
+    padding-top: pixelToRem(64);
+    height: calc(100vh - 64px);
+  }
+}
