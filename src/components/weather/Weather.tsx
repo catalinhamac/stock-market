@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 
-import { getWeather, WeatherData } from "../../api/weather-client";
+import { getWeather, WeatherData } from "../../api/weather";
 import { WeatherContent } from "./weather-content/weather-content/WeatherContent";
 import { Loading } from "../loading/Loading";
 import { StaticContent } from "../../config/static-content-config";

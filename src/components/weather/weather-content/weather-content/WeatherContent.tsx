@@ -6,7 +6,7 @@ import {
   Hour,
   WeatherPeriods,
 } from "../../../../config/weather-config";
-import { WeatherData } from "../../../../api/weather-client";
+import { WeatherData } from "../../../../api/weather";
 
 import styles from "./WeatherContent.module.scss";
 

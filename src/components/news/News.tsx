@@ -10,7 +10,7 @@ import iconTime from "../../assets/img/IconTime.png";
 export const News = () => {
   return (
     <div className={styles.news}>
-      <div>
+      <div className={styles.wrapper}>
         <h2 className={styles.title}>{StaticContent.NewsTitle}</h2>
         <div className={styles.meta}>
           <ul className={styles.metaList}>
